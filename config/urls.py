@@ -17,14 +17,12 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    # Auth endpoints (Djoser)
-    path('api/auth/', include('djoser.urls')),
-    path('api/auth/', include('djoser.urls.jwt')),
+    # API v1 Versioning
+    path('api/v1/auth/', include('djoser.urls')),
+    path('api/v1/auth/', include('djoser.urls.jwt')),
+    path('api/v1/products/', include('apps.products.urls')),
+    path('api/v1/users/', include('apps.users.urls')),
     
-    # App endpoints
-    path('api/products/', include('apps.products.urls')),
-    path('api/users/', include('apps.users.urls')),
-    
-    # Swagger
+    # Swagger Documentation
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
