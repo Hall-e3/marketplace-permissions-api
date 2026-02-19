@@ -6,11 +6,13 @@ from rest_framework.exceptions import PermissionDenied
 
 from .models import Product
 from .serializers import ProductSerializer, ProductCreateSerializer
+from .renderers import ProductJSONRenderer, ProductListJSONRenderer
 from apps.products.permissions import HasProductPermission
 
 class ProductListCreateAPIView(generics.ListCreateAPIView):
     serializer_class = ProductSerializer
     permission_classes = [permissions.IsAuthenticated]
+    renderer_classes = [ProductListJSONRenderer]
     
     def get_queryset(self):
 
@@ -35,6 +37,7 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
 class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProductSerializer
     permission_classes = [permissions.IsAuthenticated, HasProductPermission]
+    renderer_classes = [ProductJSONRenderer]
     lookup_field = 'id'
     
     def get_queryset(self):
@@ -62,9 +65,11 @@ class PublicProductListAPIView(generics.ListAPIView):
     queryset = Product.approved.all().order_by('-created_at')
     serializer_class = ProductSerializer
     permission_classes = [permissions.AllowAny]
+    renderer_classes = [ProductListJSONRenderer]
 
 class PublicProductDetailAPIView(generics.RetrieveAPIView):
     queryset = Product.approved.all()
     serializer_class = ProductSerializer
     permission_classes = [permissions.AllowAny]
+    renderer_classes = [ProductJSONRenderer]
     lookup_field = 'id'

@@ -27,3 +27,7 @@ urlpatterns = [
     # Swagger Documentation
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
+
+admin.site.site_header = "Baisoft Marketplace Admin"
+admin.site.site_title = "Baisoft Marketplace Admin Portal"
+admin.site.index_title = "Welcome to the Baisoft Marketplace Portal"

@@ -119,7 +119,7 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    "AUTH_HEADER_TYPES": ("Bearer",),
+    "AUTH_HEADER_TYPES": ("Bearer", "JWT"),
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=2),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
@@ -127,6 +127,8 @@ SIMPLE_JWT = {
 DJOSER = {
     "LOGIN_FIELD": "email",
     "USER_CREATE_PASSWORD_RETYPE": True,
+    "SET_PASSWORD_RETYPE": True,
+    "PASSWORD_RESET_CONFIRM_RETYPE": True,
     "SERIALIZERS": {
         "user_create": "apps.users.serializers.CreateUserSerializer",
         "user": "apps.users.serializers.UserSerializer",
