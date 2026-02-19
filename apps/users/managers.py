@@ -20,10 +20,28 @@ class CustomUserManager(BaseUserManager):
         else:
             raise ValueError(_("Base User Account: An email address is required"))
 
+        from apps.businesses.models import Business
+        from apps.roles.models import Role
+
+        business_name = extra_fields.pop('business_name', 'Default Business')
+        business, _ = Business.objects.get_or_create(name=business_name)
+        
+        role, _ = Role.objects.get_or_create(
+            name=Role.RoleType.ADMIN,
+            defaults={
+                'can_create_product': True,
+                'can_edit_product': True,
+                'can_approve_product': True,
+                'can_delete_product': True,
+            }
+        )
+
         user = self.model(
             first_name=first_name, 
             last_name=last_name, 
             email=email, 
+            business=business,
+            role=role,
             **extra_fields
         )
         user.set_password(password)

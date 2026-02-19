@@ -187,3 +187,339 @@ February 19, 2026 - 04:13:16
 Django version 3.2.7, using settings 'config.settings.development'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+[19/Feb/2026 04:13:53] "POST /api/v1/auth/users/ HTTP/1.1" 201 90
+[19/Feb/2026 04:13:54] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 04:13:54] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 214
+/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:14:22,320 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:14:23,239 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/hall/.local/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/management/base.py", line 419, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+           ^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/hall/Downloads/HomeAssessment/backend/config/urls.py", line 21, in <module>
+    path('api/v1/auth/', include('djoser.urls')),
+                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/hall/.local/lib/python3.12/site-packages/djoser/urls/__init__.py", line 1, in <module>
+    from .base import urlpatterns
+  File "/home/hall/.local/lib/python3.12/site-packages/djoser/urls/base.py", line 4, in <module>
+    from djoser import views
+  File "/home/hall/.local/lib/python3.12/site-packages/djoser/views.py", line 44, in <module>
+    class UserViewSet(viewsets.ModelViewSet):
+  File "/home/hall/.local/lib/python3.12/site-packages/djoser/views.py", line 45, in UserViewSet
+    serializer_class = settings.SERIALIZERS.user
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/djoser/conf.py", line 19, in __getattribute__
+    val = import_string(val)
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/utils/module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py", line 5, in <module>
+    SYNTAX_ERROR_HERE
+NameError: name 'SYNTAX_ERROR_HERE' is not defined
+/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:14:40,981 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:14:41,839 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: apps.users.serializers.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:14:42
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/home/hall/Downloads/HomeAssessment/backend/config/urls.py changed, reloading.
+2026-02-19 04:15:17,093 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/config/urls.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:15:18,112 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: config/urls.py IMPORTED
+DEBUG: apps.users.serializers.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:15:18
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:15:47,110 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:15:47,912 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: config/urls.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:15:48
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/home/hall/Downloads/HomeAssessment/backend/apps/users/managers.py changed, reloading.
+2026-02-19 04:15:59,534 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/managers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:16:00,432 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: config/urls.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:16:00
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[19/Feb/2026 04:16:36] "POST /api/v1/auth/users/ HTTP/1.1" 201 90
+[19/Feb/2026 04:16:36] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 04:16:36] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 365
+[19/Feb/2026 04:16:36] "POST /api/v1/products/ HTTP/1.1" 201 101
+/home/hall/Downloads/HomeAssessment/backend/apps/products/serializers.py changed, reloading.
+2026-02-19 04:16:51,931 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/products/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:16:52,723 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: config/urls.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:16:52
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[19/Feb/2026 04:17:03] "POST /api/v1/auth/users/ HTTP/1.1" 201 90
+[19/Feb/2026 04:17:04] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 04:17:04] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 365
+[19/Feb/2026 04:17:04] "POST /api/v1/products/ HTTP/1.1" 201 145
+[19/Feb/2026 04:17:04] "GET /api/v1/products/ HTTP/1.1" 200 871
+[19/Feb/2026 04:17:34] "POST /api/v1/auth/users/ HTTP/1.1" 201 91
+[19/Feb/2026 04:17:34] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 04:17:34] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 365
+[19/Feb/2026 04:17:34] "POST /api/v1/products/ HTTP/1.1" 201 107
+[19/Feb/2026 04:17:34] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+[19/Feb/2026 04:17:55] "POST /api/v1/auth/users/ HTTP/1.1" 201 91
+[19/Feb/2026 04:17:55] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 04:17:55] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 365
+[19/Feb/2026 04:17:55] "POST /api/v1/products/ HTTP/1.1" 201 107
+[19/Feb/2026 04:17:55] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+Internal Server Error: /api/v1/products/ff90d8e2-341a-4c48-b2e4-c1ccb21245f2/approve/
+Traceback (most recent call last):
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 108, in debug_sql
+    yield
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/Downloads/HomeAssessment/backend/apps/products/views.py", line 56, in approve_product_view
+    product = get_object_or_404(Product, pk=pk, business=request.user.business)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 97, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 113, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/sqlite3/operations.py", line 159, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/sqlite3/operations.py", line 148, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+2026-02-19 04:17:55,787 django.request ERROR    Internal Server Error: /api/v1/products/ff90d8e2-341a-4c48-b2e4-c1ccb21245f2/approve/
+Traceback (most recent call last):
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 108, in debug_sql
+    yield
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/Downloads/HomeAssessment/backend/apps/products/views.py", line 56, in approve_product_view
+    product = get_object_or_404(Product, pk=pk, business=request.user.business)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 97, in execute
+    with self.debug_sql(sql, params, use_last_executed_query=True):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/utils.py", line 113, in debug_sql
+    sql = self.db.ops.last_executed_query(self.cursor, sql, params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/sqlite3/operations.py", line 159, in last_executed_query
+    params = self._quote_params_for_last_executed_query(params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/db/backends/sqlite3/operations.py", line 148, in _quote_params_for_last_executed_query
+    return cursor.execute(sql, params).fetchone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OverflowError: Python int too large to convert to SQLite INTEGER
+[19/Feb/2026 04:17:55] "POST /api/v1/products/ff90d8e2-341a-4c48-b2e4-c1ccb21245f2/approve/ HTTP/1.1" 500 189765

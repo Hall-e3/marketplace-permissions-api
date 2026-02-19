@@ -1,4 +1,5 @@
 from django.contrib import admin
+print("DEBUG: config/urls.py IMPORTED")
 from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
