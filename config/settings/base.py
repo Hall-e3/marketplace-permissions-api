@@ -172,7 +172,7 @@ logging.config.dictConfig(
                 "level": "INFO",
                 "class": "logging.FileHandler",
                 "formatter": "file",
-                "filename": "logs/baisoft.log",
+                "filename": str(BASE_DIR / "logs/baisoft.log"),
             },
             "django.server": DEFAULT_LOGGING["handlers"]["django.server"],
         },
