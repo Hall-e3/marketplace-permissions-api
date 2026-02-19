@@ -39,13 +39,15 @@ class CreateUserSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
         
     def create(self, validated_data):
-        business_name = validated_data.pop('business_name')
+        logger.info(f"Creating user with data: {validated_data}")
+        business_name = validated_data.pop('business_name', None)
+        if not business_name:
+            business_name = validated_data.pop('business', 'Default Business')
+            
         password = validated_data.pop('password')
         
-        # Create business
         business, _ = Business.objects.get_or_create(name=business_name)
         
-        # Get or create default admin role
         role, _ = Role.objects.get_or_create(
             name=Role.RoleType.ADMIN,
             defaults={
@@ -64,4 +66,5 @@ class CreateUserSerializer(serializers.ModelSerializer):
             business=business,
             role=role
         )
+        logger.info(f"User created successfully: {user.email} linked to {business.name}")
         return user

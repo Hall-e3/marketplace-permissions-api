@@ -31,3 +31,7 @@
 2026-02-19 03:58:17,554 django.request WARNING  Unauthorized: /api/v1/products/
 2026-02-19 04:00:14,824 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
 2026-02-19 04:01:08,299 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 04:09:33,406 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:09:34,314 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2026-02-19 04:09:54,113 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:09:54,971 django.utils.autoreload INFO     Watching for file changes with StatReloader

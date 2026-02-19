@@ -151,3 +151,25 @@ Unauthorized: /api/v1/products/
 [19/Feb/2026 04:01:08] "GET /api/v1/products/ HTTP/1.1" 401 58
 [19/Feb/2026 04:04:21] "GET /api/v1/products/public/ HTTP/1.1" 200 52
 [19/Feb/2026 04:04:21] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:09:33,406 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:09:34,314 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:09:34
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:09:54,113 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:09:54,971 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:09:55
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
