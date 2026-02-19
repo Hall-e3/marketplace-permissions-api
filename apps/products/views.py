@@ -13,7 +13,7 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     
     def get_queryset(self):
-        # Multi-tenant filtering: users only see products from their business
+
         if getattr(self.request.user, 'business', None):
             return Product.objects.filter(business=self.request.user.business).order_by('-created_at')
         return Product.objects.none()
@@ -24,7 +24,6 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
         return ProductSerializer
     
     def perform_create(self, serializer):
-        # Check permission handled by permission class ideally, but here explicit check
         if not getattr(self.request.user.role, 'can_create_product', False):
             raise PermissionDenied("You don't have permission to create products")
         
@@ -53,7 +52,8 @@ def approve_product_view(request, pk):
             status=status.HTTP_403_FORBIDDEN
         )
     
-    product = get_object_or_404(Product, pk=pk, business=request.user.business)
+    product = get_object_or_404(Product, id=pk, business=request.user.business)
+    product.submit_for_approval()  
     product.approve()
     
     return Response(ProductSerializer(product).data)

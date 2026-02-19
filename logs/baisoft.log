@@ -131,3 +131,9 @@ Traceback (most recent call last):
     return cursor.execute(sql, params).fetchone()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 OverflowError: Python int too large to convert to SQLite INTEGER
+2026-02-19 04:18:41,391 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+2026-02-19 04:18:42,258 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2026-02-19 04:18:57,382 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+2026-02-19 04:18:58,262 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2026-02-19 04:19:30,052 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+2026-02-19 04:19:31,000 django.utils.autoreload INFO     Watching for file changes with StatReloader

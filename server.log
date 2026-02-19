@@ -523,3 +523,46 @@ Traceback (most recent call last):
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 OverflowError: Python int too large to convert to SQLite INTEGER
 [19/Feb/2026 04:17:55] "POST /api/v1/products/ff90d8e2-341a-4c48-b2e4-c1ccb21245f2/approve/ HTTP/1.1" 500 189765
+/home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+2026-02-19 04:18:41,391 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:18:42,258 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: config/urls.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:18:42
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[19/Feb/2026 04:18:56] "POST /api/v1/auth/users/ HTTP/1.1" 201 91
+[19/Feb/2026 04:18:56] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 04:18:56] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 365
+[19/Feb/2026 04:18:56] "POST /api/v1/products/ HTTP/1.1" 201 107
+[19/Feb/2026 04:18:56] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+[19/Feb/2026 04:18:56] "POST /api/v1/products/032f44b7-5fcb-4c13-a6b6-93326b333dfd/approve/ HTTP/1.1" 200 360
+[19/Feb/2026 04:18:56] "GET /api/v1/products/public/ HTTP/1.1" 200 412
+/home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+2026-02-19 04:18:57,382 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:18:58,262 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: config/urls.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:18:58
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+2026-02-19 04:19:30,052 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/products/views.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:19:31,000 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+DEBUG: config/urls.py IMPORTED
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:19:31
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
