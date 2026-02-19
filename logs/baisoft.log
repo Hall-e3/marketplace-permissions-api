@@ -1,2 +1,33 @@
 2026-02-19 02:26:29,617 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2026-02-19 02:26:42,475 django.request WARNING  Unauthorized: /api/v1/auth/users/
+2026-02-19 02:35:08,037 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2026-02-19 02:43:43,301 django.request WARNING  Bad Request: /api/v1/auth/users/
+2026-02-19 03:04:42,639 django.request WARNING  Forbidden: /api/v1/products/
+2026-02-19 03:06:58,106 django.request WARNING  Forbidden: /api/v1/products/
+2026-02-19 03:08:03,681 django.request WARNING  Unauthorized: /api/v1/auth/users/
+2026-02-19 03:08:57,671 django.request WARNING  Not Found: /api/products/
+2026-02-19 03:09:20,398 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:10:14,802 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 03:10:15,532 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2026-02-19 03:48:03,460 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:48:04,472 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:48:06,484 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:48:10,499 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:49:24,742 django.request WARNING  Forbidden: /api/v1/products/
+2026-02-19 03:49:26,108 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:49:27,129 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:49:29,141 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:49:33,154 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:50:26,195 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:52:05,077 django.request WARNING  Forbidden: /api/v1/products/
+2026-02-19 03:55:02,405 django.request WARNING  Not Found: /api/v1/businesses/
+2026-02-19 03:56:26,944 django.request WARNING  Not Found: /api/v1/businesses/
+2026-02-19 03:56:27,040 django.request WARNING  Not Found: /api/v1/business/
+2026-02-19 03:56:27,136 django.request WARNING  Not Found: /api/v1/profiles/
+2026-02-19 03:56:27,234 django.request WARNING  Not Found: /api/v1/profile/me/
+2026-02-19 03:58:10,515 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:58:11,535 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:58:13,545 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 03:58:17,554 django.request WARNING  Unauthorized: /api/v1/products/
+2026-02-19 04:00:14,824 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2026-02-19 04:01:08,299 django.request WARNING  Unauthorized: /api/v1/products/

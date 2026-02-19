@@ -1,14 +1,151 @@
 Watching for file changes with StatReloader
-2026-02-19 02:26:29,617 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2026-02-19 02:35:08,037 django.utils.autoreload INFO     Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
-February 19, 2026 - 02:26:29
+February 19, 2026 - 02:35:08
 Django version 3.2.7, using settings 'config.settings.development'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+[19/Feb/2026 02:43:43] "OPTIONS /api/v1/auth/users/ HTTP/1.1" 200 0
+Bad Request: /api/v1/auth/users/
+2026-02-19 02:43:43,301 django.request WARNING  Bad Request: /api/v1/auth/users/
+[19/Feb/2026 02:43:43] "POST /api/v1/auth/users/ HTTP/1.1" 400 45
+[19/Feb/2026 03:00:09] "POST /api/v1/auth/users/ HTTP/1.1" 201 71
+[19/Feb/2026 03:01:07] "OPTIONS /api/v1/auth/jwt/create/ HTTP/1.1" 200 0
+[19/Feb/2026 03:01:07] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 03:04:42] "OPTIONS /api/v1/products/ HTTP/1.1" 200 0
+Forbidden: /api/v1/products/
+2026-02-19 03:04:42,639 django.request WARNING  Forbidden: /api/v1/products/
+[19/Feb/2026 03:04:42] "POST /api/v1/products/ HTTP/1.1" 403 57
+[19/Feb/2026 03:05:03] "OPTIONS /api/v1/auth/users/me/ HTTP/1.1" 200 0
+[19/Feb/2026 03:05:03] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 195
+[19/Feb/2026 03:05:22] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+[19/Feb/2026 03:05:22] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+[19/Feb/2026 03:05:37] "GET /admin/ HTTP/1.1" 302 0
+[19/Feb/2026 03:05:37] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2211
+[19/Feb/2026 03:05:37] "GET /static/admin/css/base.css HTTP/1.1" 200 19513
+[19/Feb/2026 03:05:37] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+[19/Feb/2026 03:05:37] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[19/Feb/2026 03:05:37] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+[19/Feb/2026 03:05:37] "GET /static/admin/css/login.css HTTP/1.1" 200 939
+[19/Feb/2026 03:05:37] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[19/Feb/2026 03:05:37] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[19/Feb/2026 03:05:37] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[19/Feb/2026 03:06:13] "POST /api/v1/auth/users/ HTTP/1.1" 201 80
+[19/Feb/2026 03:06:34] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+Forbidden: /api/v1/products/
+2026-02-19 03:06:58,106 django.request WARNING  Forbidden: /api/v1/products/
+[19/Feb/2026 03:06:58] "POST /api/v1/products/ HTTP/1.1" 403 57
+[19/Feb/2026 03:07:17] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 204
+/home/hall/.local/lib/python3.12/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'apps.users.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+[19/Feb/2026 03:07:39] "GET /api/v1/auth/users/ HTTP/1.1" 200 256
 Unauthorized: /api/v1/auth/users/
-2026-02-19 02:26:42,475 django.request WARNING  Unauthorized: /api/v1/auth/users/
-[19/Feb/2026 02:26:42] "HEAD /api/v1/auth/users/ HTTP/1.1" 401 58
-[19/Feb/2026 02:26:42,476] - Broken pipe from ('127.0.0.1', 42630)
+2026-02-19 03:08:03,681 django.request WARNING  Unauthorized: /api/v1/auth/users/
+[19/Feb/2026 03:08:03] "OPTIONS /api/v1/auth/users/ HTTP/1.1" 401 58
+[19/Feb/2026 03:08:57] "OPTIONS /api/products/ HTTP/1.1" 200 0
+Not Found: /api/products/
+2026-02-19 03:08:57,671 django.request WARNING  Not Found: /api/products/
+[19/Feb/2026 03:08:57] "POST /api/products/ HTTP/1.1" 404 2704
+Unauthorized: /api/v1/products/
+2026-02-19 03:09:20,398 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:09:20] "GET /api/v1/products/ HTTP/1.1" 401 58
+/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 03:10:14,802 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 03:10:15,532 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
 
+System check identified no issues (0 silenced).
+February 19, 2026 - 03:10:15
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[19/Feb/2026 03:44:32] "POST /api/v1/auth/users/ HTTP/1.1" 201 78
+[19/Feb/2026 03:47:01] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+Unauthorized: /api/v1/products/
+2026-02-19 03:48:03,460 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:48:03] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:48:04,472 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:48:04] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:48:06,484 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:48:06] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:48:10,499 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:48:10] "GET /api/v1/products/ HTTP/1.1" 401 58
+[19/Feb/2026 03:49:24] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+Forbidden: /api/v1/products/
+2026-02-19 03:49:24,742 django.request WARNING  Forbidden: /api/v1/products/
+[19/Feb/2026 03:49:24] "POST /api/v1/products/ HTTP/1.1" 403 57
+Unauthorized: /api/v1/products/
+2026-02-19 03:49:26,108 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:49:26] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:49:27,129 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:49:27] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:49:29,141 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:49:29] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:49:33,154 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:49:33] "GET /api/v1/products/ HTTP/1.1" 401 58
+[19/Feb/2026 03:50:01] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+[19/Feb/2026 03:50:01] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+Unauthorized: /api/v1/products/
+2026-02-19 03:50:26,195 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:50:26] "GET /api/v1/products/ HTTP/1.1" 401 58
+[19/Feb/2026 03:51:32] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 03:51:32] "GET /api/v1/products/ HTTP/1.1" 200 52
+[19/Feb/2026 03:51:33] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+[19/Feb/2026 03:51:33] "GET /api/v1/products/public/ HTTP/1.1" 200 52
+[19/Feb/2026 03:52:05] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+Forbidden: /api/v1/products/
+2026-02-19 03:52:05,077 django.request WARNING  Forbidden: /api/v1/products/
+[19/Feb/2026 03:52:05] "POST /api/v1/products/ HTTP/1.1" 403 57
+[19/Feb/2026 03:53:30] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 03:53:30] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 202
+[19/Feb/2026 03:53:59] "POST /api/v1/auth/users/ HTTP/1.1" 201 80
+[19/Feb/2026 03:54:23] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 03:54:23] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 204
+[19/Feb/2026 03:55:02] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 03:55:02] "OPTIONS /api/v1/businesses/ HTTP/1.1" 200 0
+Not Found: /api/v1/businesses/
+2026-02-19 03:55:02,405 django.request WARNING  Not Found: /api/v1/businesses/
+[19/Feb/2026 03:55:02] "POST /api/v1/businesses/ HTTP/1.1" 404 2719
+[19/Feb/2026 03:56:26] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+Not Found: /api/v1/businesses/
+2026-02-19 03:56:26,944 django.request WARNING  Not Found: /api/v1/businesses/
+[19/Feb/2026 03:56:26] "GET /api/v1/businesses/ HTTP/1.1" 404 2718
+[19/Feb/2026 03:56:26] "OPTIONS /api/v1/business/ HTTP/1.1" 200 0
+Not Found: /api/v1/business/
+2026-02-19 03:56:27,040 django.request WARNING  Not Found: /api/v1/business/
+[19/Feb/2026 03:56:27] "GET /api/v1/business/ HTTP/1.1" 404 2712
+[19/Feb/2026 03:56:27] "OPTIONS /api/v1/profiles/ HTTP/1.1" 200 0
+Not Found: /api/v1/profiles/
+2026-02-19 03:56:27,136 django.request WARNING  Not Found: /api/v1/profiles/
+[19/Feb/2026 03:56:27] "GET /api/v1/profiles/ HTTP/1.1" 404 2712
+[19/Feb/2026 03:56:27] "OPTIONS /api/v1/profile/me/ HTTP/1.1" 200 0
+Not Found: /api/v1/profile/me/
+2026-02-19 03:56:27,234 django.request WARNING  Not Found: /api/v1/profile/me/
+[19/Feb/2026 03:56:27] "GET /api/v1/profile/me/ HTTP/1.1" 404 2718
+Unauthorized: /api/v1/products/
+2026-02-19 03:58:10,515 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:58:10] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:58:11,535 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:58:11] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:58:13,545 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:58:13] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/products/
+2026-02-19 03:58:17,554 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 03:58:17] "GET /api/v1/products/ HTTP/1.1" 401 58
+Unauthorized: /api/v1/auth/jwt/create/
+2026-02-19 04:00:14,824 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+[19/Feb/2026 04:00:14] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 401 63
+Unauthorized: /api/v1/products/
+2026-02-19 04:01:08,299 django.request WARNING  Unauthorized: /api/v1/products/
+[19/Feb/2026 04:01:08] "GET /api/v1/products/ HTTP/1.1" 401 58
