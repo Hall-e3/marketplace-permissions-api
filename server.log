@@ -63,3 +63,47 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
 [19/Feb/2026 02:03:31] "GET /swagger/ HTTP/1.1" 500 96750
+Internal Server Error: /swagger/
+Traceback (most recent call last):
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/drf_yasg/renderers.py", line 73, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hall/.local/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: drf-yasg/swagger-ui.html
+[19/Feb/2026 02:05:16] "GET /swagger/ HTTP/1.1" 500 96887
+/home/hall/Downloads/HomeAssessment/backend/config/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 19, 2026 - 02:05:22
+Django version 3.2.7, using settings 'config.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[19/Feb/2026 02:05:38] "GET /swagger/ HTTP/1.1" 200 2235
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 143074
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 329649
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/url-polyfill.min.js HTTP/1.1" 200 6092
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14715
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1038857
+[19/Feb/2026 02:05:38] "GET /swagger/?format=openapi HTTP/1.1" 200 15932
+[19/Feb/2026 02:05:38] "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628

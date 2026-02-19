@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "djoser",
     "corsheaders",
     "django_filters",
+    "drf_yasg",
     
     # Local apps
     "apps.common",
