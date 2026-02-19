@@ -39,6 +39,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
         
     def create(self, validated_data):
+        print(f"DEBUG: CreateUserSerializer.create called with {validated_data}")
         logger.info(f"Creating user with data: {validated_data}")
         business_name = validated_data.pop('business_name', None)
         if not business_name:

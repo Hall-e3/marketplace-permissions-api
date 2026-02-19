@@ -35,3 +35,5 @@
 2026-02-19 04:09:34,314 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2026-02-19 04:09:54,113 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
 2026-02-19 04:09:54,971 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2026-02-19 04:13:15,562 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:13:16,412 django.utils.autoreload INFO     Watching for file changes with StatReloader

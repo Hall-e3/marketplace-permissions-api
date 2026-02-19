@@ -173,3 +173,17 @@ February 19, 2026 - 04:09:55
 Django version 3.2.7, using settings 'config.settings.development'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+[19/Feb/2026 04:12:35] "POST /api/v1/auth/users/ HTTP/1.1" 201 90
+[19/Feb/2026 04:12:35] "POST /api/v1/auth/jwt/create/ HTTP/1.1" 200 537
+[19/Feb/2026 04:12:35] "GET /api/v1/auth/users/me/ HTTP/1.1" 200 214
+/home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+2026-02-19 04:13:15,562 django.utils.autoreload INFO     /home/hall/Downloads/HomeAssessment/backend/apps/users/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+2026-02-19 04:13:16,412 django.utils.autoreload INFO     Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 19, 2026 - 04:13:16
+Django version 3.2.7, using settings 'config.settings.development'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
